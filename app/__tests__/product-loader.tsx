@@ -19,7 +19,7 @@ export const MOCK_PRODUCT_DATA = {
     url: "https://mock.akakce.dev/product101.json"
 }
 
-describe('matching cities to foods', () => {
+describe('loader function tests', () => {
     let productsData: { horizontalProductList: any; productList: any[]; nextUrl: any; };
     // Load the data before running the tests
     beforeEach(async () => {
@@ -27,7 +27,7 @@ describe('matching cities to foods', () => {
         const productsData = useLoaderData<typeof loader>();
     });
   
-    test('product list loader returns correct data', async () => {
+    test('check product list loader returns correct data', async () => {
         
         // Check if the data has the correct properties
         expect(productsData).toHaveProperty(PRODUCT_LIST_PROPERTIES.horizontalProductList);
