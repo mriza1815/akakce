@@ -14,7 +14,6 @@ describe('Testing Project Components', () => {
 
         const productData = await getProductDetail(MOCK_PRODUCT_ID);
         
-        
         render(<Card product={productData} />, { wrapper: MemoryRouter });
         
         // Check if the product name and price are rendered
