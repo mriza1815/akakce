@@ -1,4 +1,5 @@
 import { Link } from "@remix-run/react";
+import { LANG } from "lang";
 import { Product } from "~/interfaces/Product";
 import { formatCurrency } from "~/utils";
 
@@ -20,8 +21,8 @@ export default function Card({ product }: { product: Product }) {
                 <span className="truncate text-base font-medium tracking-tight text-blue-400">{product.name}</span>
                 <div className="flex flex-col gap-x-14 mt-5">
                     <span className="text-lg font-semibold text-black">{`${formatCurrency(product.price)}`}</span>
-                    <span className="font-medium text-gray-500 text-base">{`${product.countOfPrices} satıcı >`}</span>
-                    <span className="font-medium text-gray-500 text-base mt-3">{`${product.followCount}+ takip`}</span>
+                    <span className="font-medium text-gray-500 text-base">{`${product.countOfPrices} ${LANG.seller} >`}</span>
+                    <span className="font-medium text-gray-500 text-base mt-3">{`${product.followCount}+ ${LANG.follower}`}</span>
                 </div>
                 </div>
             </div>

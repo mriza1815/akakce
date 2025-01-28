@@ -1,3 +1,4 @@
+import { LANG } from "lang";
 import Rating from "~/components/Rating";
 import { ProductDetail } from "~/interfaces/ProductDetail";
 import { formatCurrency } from "~/utils";
@@ -11,7 +12,7 @@ const ProductDetailView = ({
         <div>
             <header className="flex flex-col items-center">
                 <h1 className="leading text-2xl font-bold text-gray-800 dark:text-gray-100">
-                <span className="sr-only">Product Detail</span>
+                <span className="sr-only">{LANG.PRODUCT_DETAIL}</span>
                 </h1>
             </header>
             <section className="justify-center justify-items-center mt-10 w-full">
@@ -33,7 +34,7 @@ const ProductDetailView = ({
                 </div>
                 <div id="product-description" className="bg-gray-200 flex items-center justify-center w-100 mt-3">
                     <div className="flex flex-col items-center gap-4 w-[300px] p-3">
-                        <span className="text-lg font-semibold text-black text-center">Kapasite Seçenekleri</span>
+                        <span className="text-lg font-semibold text-black text-center">{LANG.CAPACITY_OPTIONS}</span>
                         <div className="flex flex-row gap-x-3 space-around">
                             {productDetail.storageOptions.map((capacity: any) => (
                                 <div className="border flex h-[40px] items-center justify-center w-[100px] bg-slate-300 rounded-sm">
@@ -44,9 +45,9 @@ const ProductDetailView = ({
                         <div className="flex flex-col w-full text-center gap-y-3">
                             <span className="text-lg font-semibold text-black">{`${formatCurrency(productDetail.price)}`}</span>
                             {productDetail.freeShipping && 
-                                <span className="text-xs font-semibold text-green-700">Ücretsiz Kargo</span>
+                                <span className="text-xs font-semibold text-green-700">{LANG.FREE_SHIPPING}</span>
                             }
-                            <span className="text-xs font-semibold text-gray-500">{`Son güncelleme: ${productDetail.lastUpdate}`}</span>
+                            <span className="text-xs font-semibold text-gray-500">{`${LANG.LAST_UPDATE}: ${productDetail.lastUpdate}`}</span>
                         </div>
                     </div>
                 </div>
