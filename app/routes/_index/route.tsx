@@ -34,6 +34,7 @@ export default function ProductList() {
     const prevIsDisabled = page === 0;
     const nextIsDisabled = (page + 1) * ITEM_PER_PAGE >= products.productList.length;
 
+    // Pagination on client side: Slice the product list according to the page number.
     const showedList = products.productList.slice(page * ITEM_PER_PAGE, (page + 1) * ITEM_PER_PAGE);
     
     const onPreviousClick = () => {

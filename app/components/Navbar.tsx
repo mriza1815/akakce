@@ -1,4 +1,3 @@
-
 export default function Navbar({ title }: { title: string }) {
     return (
         <nav id="store" className="w-full z-30 top-0 px-6 py-1 border-b-2">
